@@ -145,12 +145,33 @@
       <img src="image/insta-svgrepo-com.svg" width="50" alt="Contact" />
       <img src="image/linkedin-1-svgrepo-com.svg" width="50" alt="Contact" />
     </section>
-
+    
     <section id="portfolio" class="section">
-      <h2>Portfolio</h2>
-      <img src="image/Chateau a l horizon_v002.png" alt="Portfolio" />
-      <p>Mon travail artistique en 2D et 3D.</p>
-    </section>
+  <h2>Portfolio</h2>
+
+  <div class="portfolio-gallery" id="portfolio-gallery">
+    <!-- Les images seront injectées ici par JS -->
+  </div>
+
+  <a href="documents/portfolio.pdf" download class="download-btn">
+    Télécharger le portfolio complet (PDF)
+  </a>
+</section>
+
+<script>
+  const gallery = document.getElementById('portfolio-gallery');
+  const totalImages = 19; // Nombre d'images
+
+  for(let i = 1; i <= totalImages; i++) {
+    const img = document.createElement('img');
+    img.src = `images/${i}.png`; // adapte le chemin si besoin
+    img.alt = `Planche ${i}`;
+    img.style.width = '200px'; // tu peux changer le style ici
+    img.style.margin = '10px';
+    gallery.appendChild(img);
+  }
+</script>
+
   </div>
   
     <div class="footer">
