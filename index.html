@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mariana's Page</title>
+  <title>Mariana's Page - Image Carousel</title>
+  
+  <!-- Place any other head content (CSS, scripts, etc.) here -->  
   <style>
     html, body {
       height: 100%;
@@ -110,6 +112,45 @@
   height: 100%;
   object-fit: cover;
 }
+     .carousel {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+    }
 
   </style>
   <!-- Font Awesome Icons -->
@@ -181,6 +222,43 @@
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
+    <div class="carousel">
+  <div class="carousel-track" id="carousel-track">
+    <div class="carousel-slide" style="background-image: url('images/1.png');"></div>
+    <div class="carousel-slide" style="background-image: url('images/2.png');"></div>
+    <div class="carousel-slide" style="background-image: url('images/3.png');"></div>
+    <!-- Add more slides here -->
+  </div>
+
+  <div class="carousel-buttons">
+    <button onclick="prevSlide()">❮</button>
+    <button onclick="nextSlide()">❯</button>
+  </div>
+</div>
+
+<script>
+  const track = document.getElementById('carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  }
+
+  // Auto-scroll every 4 seconds
+  setInterval(nextSlide, 4000);
+</script>
+
   </script>
 </body>
 </html>
