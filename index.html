@@ -112,20 +112,20 @@
   height: 100%;
   object-fit: cover;
 }
-     .carousel {
-      position: relative;
-      width: 80%;
-      max-width: 600px;
-      margin: 40px auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
+        /* Style carousel*/
+    .carousel {
+  position: relative;
+  width: 100%;
+  height: 600px; /* ↔️ augmente ici la hauteur du cadre */
+  overflow: hidden;
+}
 
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
+.carousel-track img {
+  width: 100%;
+  height: 100%; /* 🧩 l'image remplit tout le cadre */
+  object-fit: cover; /* évite les distorsions, remplit sans déformer */
+}
+
 
     .carousel-slide {
       min-width: 100%;
