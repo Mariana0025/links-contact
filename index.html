@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,16 +9,16 @@
       margin: 0;
     }
 
-  body {
-  padding-top: 80px; /* hauteur de la bannière */
-  font-family: Arial, sans-serif;
-  background: url('background-image.jpg') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #eee;
-  min-height: 100vh;
-}
+    body {
+      padding-top: 80px;
+      font-family: Arial, sans-serif;
+      background: url('background-image.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #eee;
+      min-height: 100vh;
+    }
 
     header {
       width: 100%;
@@ -36,29 +35,24 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-  .container {
-  flex: 1; /* prendre tout l’espace disponible sous la bannière */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; /* centre verticalement */
-  gap: 20px;
-  max-width: 1000px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 40px;
+    }
 
     .about, .links, .gallery {
       background: white;
       border-radius: 20px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .about {
-      max-width: 300px;
       flex: 1;
+      max-width: 300px;
     }
 
     .about h2 {
@@ -66,8 +60,6 @@
     }
 
     .links {
-      max-width: 300px;
-      flex: 1;
       text-align: center;
     }
 
@@ -87,24 +79,19 @@
       color: black;
     }
 
-    .gallery {
-      max-width: 300px;
-      flex: 1;
-    }
-
     .gallery img {
       width: 100%;
       border-radius: 15px;
     }
 
     .footer {
-      margin-top: 40px;
+      margin-top: auto;
       text-align: center;
       font-size: 14px;
       color: #777;
+      padding: 20px;
     }
   </style>
-  <!-- Icons from Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -112,7 +99,6 @@
   <header>WELCOME TO MY PAGE</header>
 
   <div class="container">
-
     <div class="about">
       <h2>Hola! I'm Mariana</h2>
       <p>I'm Mariana Orellana, a French-Spanish digital artist. I have experience in both 2D and 3D animation.</p>
@@ -120,7 +106,7 @@
 
     <div class="links">
       <h3>LINKS AND CONTACT</h3>
-      <a href="mariana.og2025@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:mariana.og2025@gmail.com"><i class="fas fa-envelope"></i></a>
       <img src="image/gmail-svgrepo-com.svg" alt="Gmail" width="40" />
       <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
       <img src="image/insta-svgrepo-com.svg" alt="Instagram" width="40" />
@@ -131,7 +117,6 @@
     <div class="gallery">
       <img src="image/Chateau a l horizon_v002.png" alt="Art deco items" />
     </div>
-
   </div>
 
   <div class="footer">
