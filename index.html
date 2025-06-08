@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Mariana's Page</title>
   <style>
-body {
-  margin: 0;
-  padding-top: 80px; /* ajoute cette ligne pour laisser de l'espace sous la bannière */
-  font-family: Arial, sans-serif;
-  background: url('background-image.jpg') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #eee;
-}
-
+    body {
+      margin: 0;
+      padding-top: 80px; /* espace sous la bannière */
+      font-family: Arial, sans-serif;
+      background: url('background-image.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #eee;
+    }
 
     header {
+      width: 100%;
+      background: white;
+      color: black;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 20px;
-      font-size: 18px;
+      padding: 20px 0;
+      font-size: 28px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .container {
@@ -104,12 +111,12 @@ body {
       <h3>LINKS AND CONTACT</h3>
       <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
       <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-      <img src="image/insta-svgrepo-com.svg" alt="Instagram" width="40">
+      <img src="image/insta-svgrepo-com.svg" alt="Instagram" width="40" />
       <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
     </div>
 
     <div class="gallery">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Vector_art_decor.png/600px-Vector_art_decor.png" alt="Art deco items">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Vector_art_decor.png/600px-Vector_art_decor.png" alt="Art deco items" />
     </div>
 
   </div>
@@ -120,4 +127,3 @@ body {
 
 </body>
 </html>
-
