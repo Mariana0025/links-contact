@@ -6,4 +6,7 @@ Je suis une artiste digitale franco-espagnole, spécialisée en animation 2D et 
 💼 [Mon site en ligne](https://tonpseudo.github.io/links-contact)  
 📩 Contact, réseaux et projets ci-dessous 👇
 
-  111
+git add .
+git commit -m "Forcer la republication du site"
+git push
+
