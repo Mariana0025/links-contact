@@ -8,6 +8,7 @@
       height: 100%;
       margin: 0;
 body {
+  margin-left: 60px; /* même largeur que le header */
   padding-top: 80px;
   font-family: Arial, sans-serif;
   background-color: #eee;
@@ -33,19 +34,15 @@ body::before {
 }
 
     header {
-      width: 100%;
-      background: white;
-      color: black;
-      font-weight: bold;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 28px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+  width: 60px; /* largeur de la barre latérale */
+  height: 100vh;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
 
     .container {
       display: flex;
