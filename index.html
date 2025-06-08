@@ -156,6 +156,28 @@
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+  <script>
+  const track = document.querySelector('.carousel-track');
+  const images = document.querySelectorAll('.carousel-track img');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % images.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + images.length) % images.length;
+    updateCarousel();
+  });
+</script>
+
 <body>
   <header class="sidebar">
    <button onclick="showSection('home')">🏠</button>
@@ -170,6 +192,16 @@
   <div class="content">
     <section id="home" class="section active">
       <h2>Bienvenue sur ma page !</h2>
+        <!-- C A R O U S E L -->
+      <div class="carousel">
+    <div class="carousel-track">
+      <img src="image/1.png" alt="Slide 1">
+      <img src="image/2.png" alt="Slide 2">
+      <img src="image/3.png" alt="Slide 3">
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
       
      <div class="profile-pic">
        <img src="image/Chateau a l horizon_v002.png" alt="Photo de profil">
@@ -222,43 +254,6 @@
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
-    <div class="carousel">
-  <div class="carousel-track" id="carousel-track">
-    <div class="carousel-slide" style="background-image: url('images/1.png');"></div>
-    <div class="carousel-slide" style="background-image: url('images/2.png');"></div>
-    <div class="carousel-slide" style="background-image: url('images/3.png');"></div>
-    <!-- Add more slides here -->
-  </div>
-
-  <div class="carousel-buttons">
-    <button onclick="prevSlide()">❮</button>
-    <button onclick="nextSlide()">❯</button>
-  </div>
-</div>
-
-<script>
-  const track = document.getElementById('carousel-track');
-  const slides = document.querySelectorAll('.carousel-slide');
-  let index = 0;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  function nextSlide() {
-    index = (index + 1) % slides.length;
-    updateCarousel();
-  }
-
-  function prevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    updateCarousel();
-  }
-
-  // Auto-scroll every 4 seconds
-  setInterval(nextSlide, 4000);
-</script>
-
   </script>
 </body>
 </html>
